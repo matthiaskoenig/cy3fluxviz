@@ -4,7 +4,7 @@
 
 **cy3sbmlviz** is an open-source Cytoscape 3 app for the visualization of flux distributions in molecular interaction  networks. This project will port [cy2fluxviz](https://github.com/matthiaskoenig/cy2fluxviz) to Cytoscape 3.
 
-**Status** : alpha 
+**Status** : alpha  
 **Support & Forum** : https://groups.google.com/forum/#!forum/cysbml-cyfluxviz  
 **Bug Tracker** : https://github.com/matthiaskoenig/cy3fluxviz/issues  
 
