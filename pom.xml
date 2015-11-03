@@ -12,12 +12,12 @@
 		<cytoscape.api.version>3.2.1</cytoscape.api.version>
 	</properties>
 
-	<groupId>org.cy3sbml</groupId>
-	<artifactId>cy3sbmlviz</artifactId>
+	<groupId>org.cy3fluxviz</groupId>
+	<artifactId>cy3fluxviz</artifactId>
 	<packaging>bundle</packaging>
 	<version>0.0.1</version>
 	
-	<name>cy3sbmlviz</name>
+	<name>cy3fluxviz</name>
 
 	<repositories>
 		<repository>
