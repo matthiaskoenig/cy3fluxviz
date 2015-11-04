@@ -22,7 +22,7 @@ public class CyfluxvizAction extends AbstractCyAction{
 		putValue(LARGE_ICON_KEY, icon);
 		
 		this.putValue(SHORT_DESCRIPTION, "cyfluxviz action");
-		setToolbarGravity((float) 120.0);
+		setToolbarGravity((float) 500.0);
 	}
 	
 	public boolean insertSeparatorBefore(){

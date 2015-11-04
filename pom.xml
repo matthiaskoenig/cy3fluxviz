@@ -3,8 +3,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<properties>
-		<bundle.symbolicName>cy3sbmlviz</bundle.symbolicName>
-		<bundle.namespace>org.cy3sbml</bundle.namespace>
+		<bundle.symbolicName>cy3fluxviz</bundle.symbolicName>
+		<bundle.namespace>org.cy3fluxviz</bundle.namespace>
 		
 		<maven-bundle-plugin.version>2.3.4</maven-bundle-plugin.version>
 		<osgi.api.version>4.2.0</osgi.api.version>
@@ -15,7 +15,7 @@
 	<groupId>org.cy3fluxviz</groupId>
 	<artifactId>cy3fluxviz</artifactId>
 	<packaging>bundle</packaging>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	
 	<name>cy3fluxviz</name>
 
@@ -66,8 +66,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.0</version>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>1.8</source>
+					<target>1.8</target>
 					<optimize>true</optimize>
 					<showWarnings>true</showWarnings>
 					<showDeprecation>true</showDeprecation>
@@ -191,7 +191,8 @@
 		<dependency>
 			<groupId>cy3sbml-temp</groupId>
 			<artifactId>cy3sbml</artifactId>
-			<version>0.1.6</version>
+			<version>0.1.7</version>
+			<scope>provided</scope>
 		</dependency> 
 		<dependency>
 			<groupId>org.slf4j</groupId>
