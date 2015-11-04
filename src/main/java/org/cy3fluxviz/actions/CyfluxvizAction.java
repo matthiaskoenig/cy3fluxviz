@@ -13,16 +13,18 @@ import org.slf4j.LoggerFactory;
 public class CyfluxvizAction extends AbstractCyAction{
 	private static final long serialVersionUID = 1L;
 	private static final Logger logger = LoggerFactory.getLogger(CyfluxvizAction.class);
+	private SBMLManager sbmlManager;
 	
-	
-	public CyfluxvizAction(CySwingApplication cySwingApplication){
+	public CyfluxvizAction(CySwingApplication cySwingApplication, SBMLManager sbmlManager){
 		super("CyfluxvizAction");
+		this.sbmlManager = sbmlManager;
 		
 		ImageIcon icon = new ImageIcon(getClass().getResource("/images/logo-cyfluxviz.png"));
 		putValue(LARGE_ICON_KEY, icon);
 		
 		this.putValue(SHORT_DESCRIPTION, "cyfluxviz action");
 		setToolbarGravity((float) 500.0);
+		
 	}
 	
 	public boolean insertSeparatorBefore(){
@@ -41,7 +43,7 @@ public class CyfluxvizAction extends AbstractCyAction{
 		logger.debug("actionPerformed()");
 		
 		logger.info("Access SBMLmanager instance");
-		SBMLManager.getInstance();
+		sbmlManager.getInstance();
 		
 	}
 }
