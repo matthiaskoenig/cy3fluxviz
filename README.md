@@ -14,6 +14,11 @@
 * Documentation: [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/)
 
 ## Installation
+### Requirements
+* Java 8
+* Cytoscape >= 3.2.1
+* [cy3sbml](https://github.com/matthiaskoenig/cy3sbml/)
+
 ### Install
 * Download the latest cy3fluxviz release `cy3fluxviz-vx.x.x.jar`  
   https://github.com/matthiaskoenig/cy3fluxviz/releases/latest
