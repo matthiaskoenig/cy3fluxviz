@@ -30,7 +30,7 @@ For working with the latest **development release** checkout the `develop` branc
 git clone https://github.com/matthiaskoenig/cy3fluxviz.git cy3fluxviz
 cd cy3fluxviz
 git checkout -b develop --track origin/develop
-mvn clean install cy3fluxviz
+mvn clean install
 ```
 
 ## Changelog
