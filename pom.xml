@@ -68,6 +68,7 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
+					<encoding>UTF-8</encoding>
 					<optimize>true</optimize>
 					<showWarnings>true</showWarnings>
 					<showDeprecation>true</showDeprecation>
@@ -179,6 +180,14 @@
 			<scope>provided</scope>
 		</dependency>
 		
+		<!-- cy3sbml dependency -->
+		<dependency>
+			<groupId>cy3sbml-temp</groupId>
+			<artifactId>cy3sbml</artifactId>
+			<version>0.1.7</version>
+			<scope>provided</scope>
+		</dependency> 
+		
 		<!-- OSGi core dependency -->
 		<dependency>
 			<groupId>org.osgi</groupId>
@@ -188,12 +197,6 @@
 		</dependency>
 		
 		<!-- 3rd party dependency -->
-		<dependency>
-			<groupId>cy3sbml-temp</groupId>
-			<artifactId>cy3sbml</artifactId>
-			<version>0.1.7</version>
-			<scope>provided</scope>
-		</dependency> 
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
