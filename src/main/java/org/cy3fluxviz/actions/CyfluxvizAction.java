@@ -7,24 +7,24 @@ import javax.swing.ImageIcon;
 import org.cy3sbml.SBMLManager;
 import org.cytoscape.application.swing.AbstractCyAction;
 import org.cytoscape.application.swing.CySwingApplication;
+import org.cytoscape.service.util.CyServiceRegistrar;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class CyfluxvizAction extends AbstractCyAction{
 	private static final long serialVersionUID = 1L;
 	private static final Logger logger = LoggerFactory.getLogger(CyfluxvizAction.class);
-	private SBMLManager sbmlManager;
+	private CyServiceRegistrar cyServiceRegistrar;
 	
-	public CyfluxvizAction(CySwingApplication cySwingApplication, SBMLManager sbmlManager){
+	public CyfluxvizAction(CySwingApplication cySwingApplication, CyServiceRegistrar cyServiceRegistrar){
 		super("CyfluxvizAction");
-		this.sbmlManager = sbmlManager;
-		
+		this.cyServiceRegistrar = cyServiceRegistrar;
+				
 		ImageIcon icon = new ImageIcon(getClass().getResource("/images/logo-cyfluxviz.png"));
 		putValue(LARGE_ICON_KEY, icon);
 		
 		this.putValue(SHORT_DESCRIPTION, "cyfluxviz action");
 		setToolbarGravity((float) 500.0);
-		
 	}
 	
 	public boolean insertSeparatorBefore(){
@@ -40,12 +40,16 @@ public class CyfluxvizAction extends AbstractCyAction{
 	
 	@Override
 	public void actionPerformed(ActionEvent event) {
-		logger.debug("actionPerformed()");
 		
-		logger.info("Access SBMLmanager instance");
-		// sbmlManager.getInstance();
-		logger.info(sbmlManager.getCurrentSBMLDocument().toString());
-		
+		// try to get the the SBMLManager service
+		try{
+			SBMLManager sbmlManager = cyServiceRegistrar.getService(SBMLManager.class);
+			logger.info("Access SBMLmanager instance");
+			logger.info(sbmlManager.info());
+		} catch (Throwable e){
+			logger.error("Could not get SBMLManager service", e);
+			e.printStackTrace();
+		}
 	}
 }
 

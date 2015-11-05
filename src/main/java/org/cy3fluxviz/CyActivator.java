@@ -33,15 +33,14 @@ public class CyActivator extends AbstractCyActivator {
 			// static access of cy3sbml information is no problem
 			logger.info("INFO:" + SBML.NODETYPE_COMPARTMENT);
 			
-			// get the SBMLManager service
-			SBMLManager sbmlManager = getService(bc, SBMLManager.class);
-			
 			// but instance information like the SBMLmanager are not accessible		
 			CySwingApplication cySwingApplication = getService(bc, CySwingApplication.class);
-			CyfluxvizAction action = new CyfluxvizAction(cySwingApplication, sbmlManager);
+			CyServiceRegistrar cyServiceRegistrar = getService(bc, CyServiceRegistrar.class);
+			
+			CyfluxvizAction action = new CyfluxvizAction(cySwingApplication, cyServiceRegistrar);
 			registerService(bc, action, CyAction.class, new Properties());
 			
-			CyServiceRegistrar registrar;
+			
 			
 			
 			logger.info("... cy3fluxviz started.");
