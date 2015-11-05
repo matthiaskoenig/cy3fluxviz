@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.cytoscape.application.swing.CyAction;
 import org.cytoscape.application.swing.CySwingApplication;
 import org.cytoscape.service.util.AbstractCyActivator;
+import org.cytoscape.service.util.CyServiceRegistrar;
 import org.cy3sbml.SBML;
 import org.cy3sbml.SBMLManager;
 import org.cy3fluxviz.CyActivator;
@@ -35,12 +36,12 @@ public class CyActivator extends AbstractCyActivator {
 			// get the SBMLManager service
 			SBMLManager sbmlManager = getService(bc, SBMLManager.class);
 			
-			
 			// but instance information like the SBMLmanager are not accessible		
 			CySwingApplication cySwingApplication = getService(bc, CySwingApplication.class);
 			CyfluxvizAction action = new CyfluxvizAction(cySwingApplication, sbmlManager);
 			registerService(bc, action, CyAction.class, new Properties());
 			
+			CyServiceRegistrar registrar;
 			
 			
 			logger.info("... cy3fluxviz started.");

@@ -43,7 +43,8 @@ public class CyfluxvizAction extends AbstractCyAction{
 		logger.debug("actionPerformed()");
 		
 		logger.info("Access SBMLmanager instance");
-		sbmlManager.getInstance();
+		// sbmlManager.getInstance();
+		logger.info(sbmlManager.getCurrentSBMLDocument().toString());
 		
 	}
 }
