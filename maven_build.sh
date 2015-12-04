@@ -31,6 +31,7 @@ echo BUILD CY3SBML  = "${BUILD_CY3SBML}"
 
 if [ "$BUILD_CY3SBML" == "" ]; then
 	# Build cy3sbml latest develop from source
+	: "${CY3SBML?Need to set CY3SBML}"
 	CY3SBML_VERSION="0.1.7"
 	cd $CY3SBML
 	mvn install -DskipTests
@@ -39,6 +40,9 @@ if [ "$BUILD_CY3SBML" == "" ]; then
 	mvn install:install-file -DgroupId=cy3sbml-temp -DartifactId=cy3sbml -Dversion=$CY3SBML_VERSION -Dfile=$CY3SBML/target/cy3sbml-$CY3SBML_VERSION.jar -Dpackaging=jar -DgeneratePom=true
 fi
 
+# lib directory
+CY3FLUXVIZ=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
 cd $CY3FLUXVIZ
-mvn install 
+mvn clean install 
 

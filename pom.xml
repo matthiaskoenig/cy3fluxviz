@@ -213,7 +213,7 @@
   		<dependency>
   			<groupId>cy3sbml-temp</groupId>
   			<artifactId>jsbml</artifactId>
-  			<version>1.1-dev</version>
+  			<version>1.1</version>
   		</dependency>
  
   		<!-- JSBML EXTENSION dependency -->
@@ -236,6 +236,11 @@
   			<groupId>cy3sbml-temp</groupId>
   			<artifactId>jsbml-fbc</artifactId>
   			<version>1.0-b1</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>cy3sbml-temp</groupId>
+  			<artifactId>jsbml-distrib</artifactId>
+  			<version>0.5</version>
   		</dependency>
   		
   		 <!-- JSBML dependencies -->
