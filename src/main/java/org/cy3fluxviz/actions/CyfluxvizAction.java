@@ -11,6 +11,9 @@ import org.cytoscape.service.util.CyServiceRegistrar;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Test access to the cy3sbml instance information.
+ */
 public class CyfluxvizAction extends AbstractCyAction{
 	private static final long serialVersionUID = 1L;
 	private static final Logger logger = LoggerFactory.getLogger(CyfluxvizAction.class);
@@ -52,4 +55,3 @@ public class CyfluxvizAction extends AbstractCyAction{
 		}
 	}
 }
-
