@@ -4,10 +4,14 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.ImageIcon;
 
-import org.cy3sbml.SBMLManager;
 import org.cytoscape.application.swing.AbstractCyAction;
 import org.cytoscape.application.swing.CySwingApplication;
 import org.cytoscape.service.util.CyServiceRegistrar;
+
+import org.cy3sbml.SBMLManager;
+import org.cy3fluxviz.FluxDisCollection;
+import org.cy3fluxviz.FluxDisCyAttributes;
+import org.cy3fluxviz.gui.CyFluxVizPanel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -53,5 +57,15 @@ public class CyfluxvizAction extends AbstractCyAction{
 			logger.error("Could not get SBMLManager service", e);
 			e.printStackTrace();
 		}
+		
+		
+		// register as an observer for the FluxDisCollection
+    	FluxDisCollection fdc = FluxDisCollection.getInstance();
+    	FluxDisCyAttributes fda = FluxDisCyAttributes.getInstance();
+    	fdc.addObserver(fda);
+    	
+    	// Creates the unique instance of the singleton CyFluxVizPanel
+    	CyFluxVizPanel fvPanel = CyFluxVizPanel.getInstance();
+    	fvPanel.selectCyFluxVizPanelAndSetDialogs();
 	}
 }
