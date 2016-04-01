@@ -3,20 +3,20 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<properties>
-		<bundle.symbolicName>cy3sbmlviz</bundle.symbolicName>
-		<bundle.namespace>org.cy3sbml</bundle.namespace>
+		<bundle.symbolicName>cy3fluxviz</bundle.symbolicName>
+		<bundle.namespace>org.cy3fluxviz</bundle.namespace>
 		
 		<maven-bundle-plugin.version>2.3.4</maven-bundle-plugin.version>
 		<osgi.api.version>4.2.0</osgi.api.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<cytoscape.api.version>3.2.1</cytoscape.api.version>
+		<Cytoscape-App-Dependencies>cy3sbml;0.1.7</Cytoscape-App-Dependencies>
 	</properties>
 
 	<groupId>org.cy3fluxviz</groupId>
 	<artifactId>cy3fluxviz</artifactId>
 	<packaging>bundle</packaging>
 	<version>0.0.2</version>
-	
 	<name>cy3fluxviz</name>
 
 	<repositories>
@@ -71,8 +71,9 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.0</version>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
 					<optimize>true</optimize>
 					<showWarnings>true</showWarnings>
 					<showDeprecation>true</showDeprecation>
@@ -92,6 +93,7 @@
 						<Bundle-SymbolicName>${bundle.symbolicName}</Bundle-SymbolicName>
 						<Bundle-Version>${project.version}</Bundle-Version>
 						<Export-Package>!${bundle.namespace}.*</Export-Package>
+						<Import-Package>org.cy3sbml.*;version="0.1.7"</Import-Package>
 						<Private-Package>${bundle.namespace}.*</Private-Package>
 						<Bundle-Activator>${bundle.namespace}.CyActivator</Bundle-Activator>
 						<Embed-Dependency>*;scope=!provided|test;groupId=!org.cytoscape</Embed-Dependency>
@@ -236,6 +238,11 @@
   			<groupId>cy3sbml-dep</groupId>
   			<artifactId>jsbml-fbc</artifactId>
   			<version>1.0-b1</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>cy3sbml-dep</groupId>
+  			<artifactId>jsbml-distrib</artifactId>
+  			<version>0.5</version>
   		</dependency>
   		
   		 <!-- JSBML dependencies -->

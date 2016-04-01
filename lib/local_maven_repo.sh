@@ -9,3 +9,4 @@ cd $CY3SBML/target
 # add to local repository
 mvn install:install-file -DgroupId=cy3sbml-dep -DartifactId=cy3sbml -Dversion=0.1.8 -Dfile=cy3sbml-0.1.8.jar -Dpackaging=jar -DgeneratePom=true -DlocalRepositoryPath=$DIR -DcreateChecksum=true
 
+
