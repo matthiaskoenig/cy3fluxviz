@@ -15,7 +15,7 @@
 	<groupId>org.cy3fluxviz</groupId>
 	<artifactId>cy3fluxviz</artifactId>
 	<packaging>bundle</packaging>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	
 	<name>cy3fluxviz</name>
 
@@ -56,6 +56,11 @@
     		<releases><enabled>true</enabled></releases>
     		<snapshots><enabled>false</enabled></snapshots>
     	</repository>
+    	<repository>
+    		<id>in-project</id>
+    		<name>In project repository</name>
+    		<url>file://${project.basedir}/lib</url>
+		</repository>
   	</repositories>
 
 	<build>
@@ -189,9 +194,9 @@
 		
 		<!-- 3rd party dependency -->
 		<dependency>
-			<groupId>cy3sbml-temp</groupId>
+			<groupId>cy3sbml-dep</groupId>
 			<artifactId>cy3sbml</artifactId>
-			<version>0.1.7</version>
+			<version>0.1.8</version>
 		</dependency> 
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -206,41 +211,41 @@
 		    	
 		<!-- JSBML CORE dependency -->
   		<dependency>
-  			<groupId>cy3sbml-temp</groupId>
+  			<groupId>cy3sbml-dep</groupId>
   			<artifactId>jsbml</artifactId>
   			<version>1.2-SNAPSHOT</version>
   		</dependency>
  
   		<!-- JSBML EXTENSION dependency -->
   		<dependency>
-  			<groupId>cy3sbml-temp</groupId>
+  			<groupId>cy3sbml-dep</groupId>
   			<artifactId>jsbml-qual</artifactId>
   			<version>2.1-b1</version>
   		</dependency>
   		<dependency>
-  			<groupId>cy3sbml-temp</groupId>
+  			<groupId>cy3sbml-dep</groupId>
   			<artifactId>jsbml-layout</artifactId>
   			<version>1.0-b1</version>
   		</dependency>
   		<dependency>
-  			<groupId>cy3sbml-temp</groupId>
+  			<groupId>cy3sbml-dep</groupId>
   			<artifactId>jsbml-comp</artifactId>
   			<version>1.0-b1</version>
   		</dependency>
   		<dependency>
-  			<groupId>cy3sbml-temp</groupId>
+  			<groupId>cy3sbml-dep</groupId>
   			<artifactId>jsbml-fbc</artifactId>
   			<version>1.0-b1</version>
   		</dependency>
   		
   		 <!-- JSBML dependencies -->
   		<dependency>
-    		<groupId>cy3sbml-temp</groupId>
+    		<groupId>cy3sbml-dep</groupId>
     		<artifactId>jigsaw-dateParser</artifactId>
     		<version>0.1</version>
     	</dependency>
     	<dependency>
-    		<groupId>cy3sbml-temp</groupId>
+    		<groupId>cy3sbml-dep</groupId>
     		<artifactId>spi-full</artifactId>
     		<version>0.2.4</version>
     	</dependency>
