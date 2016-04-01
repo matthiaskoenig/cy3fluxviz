@@ -48,7 +48,7 @@ public class CyfluxvizAction extends AbstractCyAction{
 		try{
 			SBMLManager sbmlManager = cyServiceRegistrar.getService(SBMLManager.class);
 			logger.info("Access SBMLmanager instance");
-			logger.info(sbmlManager.info());
+			logger.info(sbmlManager.toString());
 		} catch (Throwable e){
 			logger.error("Could not get SBMLManager service", e);
 			e.printStackTrace();

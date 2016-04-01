@@ -17,10 +17,6 @@
 	<artifactId>cy3fluxviz</artifactId>
 	<packaging>bundle</packaging>
 	<version>0.0.2</version>
-<<<<<<< HEAD
-=======
-	
->>>>>>> master
 	<name>cy3fluxviz</name>
 
 	<repositories>
@@ -190,14 +186,6 @@
 			<scope>provided</scope>
 		</dependency>
 		
-		<!-- cy3sbml dependency -->
-		<dependency>
-			<groupId>cy3sbml-temp</groupId>
-			<artifactId>cy3sbml</artifactId>
-			<version>0.1.7</version>
-			<scope>provided</scope>
-		</dependency> 
-		
 		<!-- OSGi core dependency -->
 		<dependency>
 			<groupId>org.osgi</groupId>
@@ -208,14 +196,11 @@
 		
 		<!-- 3rd party dependency -->
 		<dependency>
-<<<<<<< HEAD
-=======
 			<groupId>cy3sbml-dep</groupId>
 			<artifactId>cy3sbml</artifactId>
 			<version>0.1.8</version>
 		</dependency> 
 		<dependency>
->>>>>>> master
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>1.7.12</version>
@@ -255,7 +240,7 @@
   			<version>1.0-b1</version>
   		</dependency>
   		<dependency>
-  			<groupId>cy3sbml-temp</groupId>
+  			<groupId>cy3sbml-dep</groupId>
   			<artifactId>jsbml-distrib</artifactId>
   			<version>0.5</version>
   		</dependency>
