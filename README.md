@@ -1,6 +1,6 @@
 # ![alt tag](./docs/images/logo-cyfluxviz.png) cy3fluxviz
 
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=RYHNRJFBMWD5N" title="Donate to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal donate button" /></a>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=RYHNRJFBMWD5N" title="Donate to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal donate button" /></a> [![Build Status](https://travis-ci.org/matthiaskoenig/cy3fluxviz.svg?branch=develop)](https://travis-ci.org/matthiaskoenig/cy3fluxviz)
 
 **cy3fluxviz** is an open-source Cytoscape 3 app for the visualization of flux distributions in molecular interaction  networks. This project will port [cy2fluxviz](https://github.com/matthiaskoenig/cy2fluxviz) to Cytoscape 3.
 
@@ -16,7 +16,7 @@
 ## Installation
 ### Requirements
 * Java 8
-* Cytoscape >= 3.2.1
+* Cytoscape >= 3.3.0
 * [cy3sbml](https://github.com/matthiaskoenig/cy3sbml/)
 
 ### Install
@@ -34,5 +34,5 @@ mvn clean install
 ```
 
 ## Changelog
-**v0.0.1** [?]
-* no integration so far
+**v0.0.2**
+* basic integration with cy3sbml
